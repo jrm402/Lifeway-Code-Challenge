@@ -18,8 +18,15 @@
 
 .aboutMe,
 .species,
-.films {
+.films,
+.starships {
 	margin-bottom: 2rem;
+}
+.aboutMe:last-child,
+.species:last-child,
+.films:last-child,
+.starships:last-child {
+	margin-bottom: 0;
 }
 
 .noResults {
