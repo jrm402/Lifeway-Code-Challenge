@@ -1,4 +1,7 @@
-import { useUpdateSearchStore } from '@/application/context/search-store';
+import {
+	useSearchStore,
+	useUpdateSearchStore,
+} from '@/application/context/search-store';
 import { Form, Input } from '@/features/common/elements';
 import Icon from '@mui/material/Icon';
 import IconButton from '@mui/material/IconButton';
@@ -6,7 +9,8 @@ import InputAdornment from '@mui/material/InputAdornment';
 import { useState } from 'react';
 
 const Search: Component = () => {
-	const [inputValue, setInputValue] = useState<string>('');
+	const initialSearchValue = useSearchStore((state) => state.searchValue);
+	const [inputValue, setInputValue] = useState<string>(initialSearchValue);
 
 	const updateSearchStore = useUpdateSearchStore();
 
