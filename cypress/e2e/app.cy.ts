@@ -56,6 +56,18 @@ describe('Searching', () => {
 		cy.get('.MuiPaper-root').should('have.length.above', 1);
 	});
 
+	it('searches, views a profile page, then returns to the same search results', () => {
+		findSearch().type('luke{enter}');
+
+		cy.contains('Luke Skywalker').click();
+
+		cy.url().should('include', '/profile/1');
+
+		cy.contains('Go Back').click();
+
+		cy.get('input[type="text"][value="luke"]');
+	});
+
 	it('should load more search results', () => {
 		cy.get('.MuiPaper-root').should('have.length', 10);
 
