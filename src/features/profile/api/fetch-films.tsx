@@ -24,16 +24,16 @@ type QueryFnType = typeof getQueryFn;
  * Fetch films
  * @returns QueryFnType
  */
-export function useFetchFilms({ config, id }: UseFetchFilmsOptions) {
-	return useQuery({
-		...config,
-		onSuccess(data) {
-			return processFilm(data);
-		},
-		queryKey: getQueryKey(id),
-		queryFn: (context) => getQueryFn(context, id),
-	});
-}
+// export function useFetchFilms({ config, id }: UseFetchFilmsOptions) {
+// 	return useQuery({
+// 		...config,
+// 		onSuccess(data) {
+// 			return processFilm(data);
+// 		},
+// 		queryKey: getQueryKey(id),
+// 		queryFn: (context) => getQueryFn(context, id),
+// 	});
+// }
 export function useFetchFilmsArray(options: UseFetchFilmsOptions[]) {
 	return useQueries({
 		queries: options.map(({ config, id }) => ({

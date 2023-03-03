@@ -28,16 +28,16 @@ type QueryFnType = typeof getQueryFn;
  * Fetch starships
  * @returns QueryFnType
  */
-export function useFetchStarships({ config, id }: UseFetchStarshipsOptions) {
-	return useQuery({
-		...config,
-		onSuccess(data) {
-			return processStarship(data);
-		},
-		queryKey: getQueryKey(id),
-		queryFn: (context) => getQueryFn(context, id),
-	});
-}
+// export function useFetchStarships({ config, id }: UseFetchStarshipsOptions) {
+// 	return useQuery({
+// 		...config,
+// 		onSuccess(data) {
+// 			return processStarship(data);
+// 		},
+// 		queryKey: getQueryKey(id),
+// 		queryFn: (context) => getQueryFn(context, id),
+// 	});
+// }
 export function useFetchStarshipsArray(options: UseFetchStarshipsOptions[]) {
 	return useQueries({
 		queries: options.map(({ config, id }) => ({

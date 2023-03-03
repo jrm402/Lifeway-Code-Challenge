@@ -24,16 +24,16 @@ type QueryFnType = typeof getQueryFn;
  * Fetch species
  * @returns QueryFnType
  */
-export function useFetchSpecies({ config, id }: UseFetchSpeciesOptions) {
-	return useQuery({
-		...config,
-		onSuccess(data) {
-			return processSpecies(data);
-		},
-		queryKey: getQueryKey(id),
-		queryFn: (context) => getQueryFn(context, id),
-	});
-}
+// export function useFetchSpecies({ config, id }: UseFetchSpeciesOptions) {
+// 	return useQuery({
+// 		...config,
+// 		onSuccess(data) {
+// 			return processSpecies(data);
+// 		},
+// 		queryKey: getQueryKey(id),
+// 		queryFn: (context) => getQueryFn(context, id),
+// 	});
+// }
 export function useFetchSpeciesArray(options: UseFetchSpeciesOptions[]) {
 	return useQueries({
 		queries: options.map(({ config, id }) => ({
