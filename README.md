@@ -20,7 +20,31 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Testing
+
+First, start the server in either dev mode (commands above) or build and deploy a production build. The host should be deployed as `http://localhost:3000`.
+
+**Production build and deploy:**
+
+```bash
+npm run build && npm run start
+# or
+yarn build && yarn start
+```
+
+Then, in a new console window, run the following command to execute tests:
+
+```bash
+npm run cypress
+# or
+yarn cypress
+```
+
+A new window will be opened with instructions to run the `app.cy.ts` E2E test script.
+
 ## Requirements
+
+Original README requirements:
 
 ---
 
