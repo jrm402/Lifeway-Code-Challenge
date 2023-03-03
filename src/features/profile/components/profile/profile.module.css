@@ -1,0 +1,42 @@
+.heading {
+	margin-top: 1rem;
+	margin-bottom: 0.75rem;
+	text-align: center;
+}
+
+.profile {
+	padding: 1rem;
+}
+.profile h4,
+.profile h5 {
+	margin-bottom: 0.5rem;
+}
+
+.profile h5 {
+	border-bottom: 1px solid;
+}
+
+.aboutMe,
+.species,
+.films {
+	margin-bottom: 2rem;
+}
+
+.noResults {
+	text-align: center;
+	font-style: italic;
+}
+
+.aboutMe {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.aboutMe .split {
+	flex-basis: 50%;
+}
+
+/* mobile styles */
+.aboutMe.mobile .split {
+	flex-basis: 100%;
+}

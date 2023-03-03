@@ -1,0 +1,22 @@
+.film {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.03);
+	padding: 0.4rem 0.5rem;
+
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 0.25rem;
+}
+.film:last-child {
+	margin-bottom: 0;
+}
+
+.film .split {
+	flex-basis: 50%;
+}
+
+/* mobile styles */
+.film.mobile .split {
+	flex-basis: 100%;
+}
