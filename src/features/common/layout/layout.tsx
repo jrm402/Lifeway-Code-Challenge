@@ -1,4 +1,4 @@
-import { Div } from '@/features/common/elements/elements';
+import { Div } from '@/features/common/elements';
 import Box from '@mui/material/Box';
 import MuiContainer from '@mui/material/Container';
 import styles from './layout.module.css';
